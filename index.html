@@ -1,315 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  Licensed to the Apache Software Foundation (ASF) under one
-  or more contributor license agreements.  See the NOTICE file
-  distributed with this work for additional information
-  regarding copyright ownership.  The ASF licenses this file
-  to you under the Apache License, Version 2.0 (the
-  "License"); you may not use this file except in compliance
-  with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing,
-  software distributed under the License is distributed on an
-  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-  KIND, either express or implied.  See the License for the
-  specific language governing permissions and limitations
-  under the License.
--->
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+  <!-- bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- custom stylesheet (main) -->
+  <link rel="stylesheet" href="./style.css">
   <title>Apache Fineract</title>
-  <link rel="icon" type="image/png" href="images/apache-fineract-icon.png">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,latin-ext,cyrillic,cyrillic-ext" type="text/css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.min.css" type="text/css" rel="stylesheet"/>
-  <link href="css/fineract.css" type="text/css" rel="stylesheet">
 </head>
-<body id="top" class="ghost-white jet-text">
+
+<body>
   <header>
-    <div class="navbar-fixed">
-      <nav class="jet ghost-white-text">
-        <div class="nav-wrapper">
-          <div class="container">
-            <a href="#top" class="brand-logo">
-              <img class="logo" src="images/apache-fineract-logo.png" alt="Fineract Logo"/>
-              <span class="brand">Apache Fineract</span>
-            </a>
-            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-              <li><a class="ghost-white-hover" href="#about">About</a></li>
-              <li><a class="ghost-white-hover" href="#contribute">Contribute</a></li>
-              <li><a class="ghost-white-hover" href="#downloads">Downloads</a></li>
-              <li><a class="ghost-white-hover" href="#resources">Resources</a></li>
-              <li><a class="ghost-white-hover" href="#reference">Reference</a></li>
-            </ul>
-            <ul class="side-nav ghost-white jet-text" id="mobile-menu">
-              <li class="side-nav-heading">Apache Fineract</li>
-              <li><a class="jet-hover" href="#about" onclick="closeSideNav()">About</a></li>
-              <li><a class="jet-hover" href="#contribute" onclick="closeSideNav()">Contribute</a></li>
-              <li><a class="jet-hover" href="#downloads" onclick="closeSideNav()">Downloads</a></li>
-              <li><a class="jet-hover" href="#resources" onclick="closeSideNav()">Resources</a></li>
-              <li><a class="jet-hover" href="#reference" onclick="closeSideNav()">Reference</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark py-0" id="nav-container">
+      <div class="container-fluid">
+        <a class="navbar-brand mb-2 mb-lg-4" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon nav-btn-toggler light"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-4 navbar-ul">
+            <li class="nav-item">
+              <a class="nav-link hoverline text-light active" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hoverline text-light" href="#">Contribute</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hoverline text-light" href="#">Downloads</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hoverline text-light" href="#">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hoverline text-light" href="#">Reference</a>
+            </li>
+          </ul>
+          <button class="log-in btn btn-outline-light mb-lg-4 mx-2 rounded-2">Log In</button>
+          <button type="button" class="btn btn-danger mb-lg-4 documentation mx-1 rounded-2">Documentation</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section id="first-intro">
+    <div class="container-fluid">
+      <div class="row first-intro-grid">
+        <div class="col-lg-4 intro-image">
+          <img class="intro-image-img" src="assets/intro-image.png" alt="intro-image">
+        </div>
+        <div class="col-lg-8 intro-text">
+          <br>
+          <br>
+          <h1 class="intro-heading">Platform for <code>Digital Financial </code>Services</h1>
+          <br>
+          <br>
+          <div class="intro-details">
+            <img id="intro-details-img" src="assets/intro-image-1.png" alt="intro-image1">
+            <p class="intro-para"><b>Apache Fineract</b> (\’fīn-,ә-,rakt\) is open source software for financial
+              services.<br>
+              At Apache Fineract(tm), our mission is to build, maintain and enhance a cloud-ready core banking system
+              for robust, scalable, and secure operations of financial institutions. Fineract provides a reliable,
+              robust, and affordable solution for entrepreneurs, financial institutions, and service providers. We
+              believe in financial services for everyone, including and especially for the unbanked and underbanked.
+              Fineract(tm) is aimed at innovative mobile and cloud-based solutions, and enables digital transaction
+              accounts for all.
+              Fineract(tm) 1.x is a mature platform with open APIs (see releases below), while Fineract(tm) CN (under
+              development) is a cloud native, microservice architecture also supporting open banking APIs.</p>
           </div>
         </div>
-      </nav>
+      </div>
     </div>
-  </header>
-  <main class="container">
-    <section class="section">
-      <h3 class="center-align">Platform for Digital Financial Services</h3>
-      <p class="flow-text justify-align">
-        Apache Fineract (&#92;&#8217;f&#299;n-,&#1241;-,rakt&#92;) is open source software for financial services. 
-      </p>
-      <p class="flow-text justify-align">
-        At Apache Fineract(tm), our mission is to build, maintain and enhance a cloud-ready
-	core banking system for robust, scalable, and secure operations of financial institutions.  
-        Fineract provides a reliable, robust, and affordable solution
-        for entrepreneurs, financial institutions, and service providers. 
-        We believe in financial services for everyone, including and especially for the unbanked and underbanked. 
-	      
-        Fineract(tm) is aimed at innovative mobile and cloud-based solutions,
-        and enables digital transaction accounts for all.
-      </p>
-	<p class="flow-text justify-align">Fineract(tm) 1.x is a mature platform with open APIs (see releases below),
-    while Fineract(tm) CN (under development) is a cloud native, microservice architecture
-    also supporting open banking APIs. 
-      </p>
-      <div class="divider"></div>
-    </section>
-    <section id="about" class="section">
-      <h3 class="center-align">About</h3>
-      <p class="flow-text justify-align">
-        Fineract(tm) can be deployed in any environment:
-        cloud or on-premise.  It can support front end interfaces on or offline, mobile or PC.
-        It’s extensible enough to support any organizational type or delivery channel,
-        and flexible enough to support any product, service, or lending methodology.
-        For any organization, big or small, it provides
-        the client data management, loan and savings portfolio management, integrated real time accounting,
-        and social and financial reporting needed
-        to bring digital financial services to a modern connected world.
-      </p>
-	  <p class="flow-text justify-align">
-      Fineract 1.x compares well to other core banking systems
-      and draws from requirements in credit unions, microfinance institutions, and small non-banking financial institutions.
-      Features include
-      flexible product configuration,
-      KYC documentation support,
-      business rule sets,
-      payment transactions,
-      and portfolio management.
-      It includes an open API that dates to 2011 and is deployed in relatively high transaction
-      volume environments.
-    </p>
-		<p class="flow-text justify-align">
-      Fineract CN operates on the principle that financial services are an innovative space
-      and so each fineract microservice encapsulates a domain that can be combined
-      with other microservices to create new platform offerings.
-      Fineract CN microservices can be combined to create new software platforms for
-      digital financial service providers.
-      Fineract CN is still in its early days, but preliminary tests have shown that a
-      simple single-instance laptop deployment of Fineract CN can process over
-      1000 transactions/second.
-      Fineract CN also includes a fully Apache-licensed backoffice UI.
-	  </p>
-	  <p class="flow-text justify-align">
-      Fineract 1.x began incubation at Apache in December 2015 and is used by
-      an active community of companies
-      who build solutions for both financial inclusion and fintech innovation.
-    </p>
+  </section>
 
-      <div class="divider"></div>
-    </section>
-    <section id="contribute" class="section">
-      <h3 class="center-align">Contribute</h3>
-      <p class="flow-text justify-align">
-        The Apache Fineract community welcomes contributors who want to support the
-        Fineract technology. Our community builds everything from this website,
-        to the Fineract code to documentation and best practices information.
-      </p>
-      <p class="flow-text justify-align">
-        We especially welcome additions and corrections to the
-        documentation, wiki, and website to improve the user experience.
-        Bug reports and fixes and additions to the Apache Fineract code are welcome.
-        Helping users learn best practices also earns good karma in our community.
-      </p>
-      <article>
-        <h4>Mailing Lists</h4>
-        <h5>Users &amp; Developers</h5>
-        <p class="flow-text">
-          <i>If you use, build on top of, deploy or are building contributions and modifications to Apache Fineract, this is the list for you.</i><br/>
-          To subscribe, send a blank email to <a href="mailto:dev-subscribe@fineract.apache.org">dev-subscribe@fineract.apache.org</a>.<br/>
-          To <b>un</b>subscribe later, just send a blank email to <a href="mailto:dev-unsubscribe@fineract.apache.org">dev-unsubscribe@fineract.apache.org</a>.<br/>
-          You can also read the archives 
-		<a href="https://lists.apache.org/list.html?dev@fineract.apache.org" target="_blank">on lists.apache.org</a>
-		or <a href="https://markmail.org/search/?q=list%3Aorg.apache.fineract.dev+order%3Adate-backward" target="_blank">on MarkMail.org</a>.
-        </p>
-        <h5>Commits</h5>
-        <p class="flow-text">
-          <i>This list receives an email whenever new code is contributed to Apache Fineract</i>.<br/>
-          To subscribe, send a blank email to <a href="mailto:commits-subscribe@fineract.apache.org">commits-subscribe@fineract.apache.org</a>.<br/>
-          You can also <a href="https://markmail.org/search/?q=list%3Aorg.apache.fineract.commits+order%3Adate-backward" target="_blank">read the archives</a>.
-        </p>
-      </article>
-      <div class="divider"></div>
-    </section>
-    <section id="downloads" class="section">
-      <h3 class="center-align">Downloads</h3>
-      <p class="flow-text justify-align">The below table lists mirrored release artifacts and their associated hashes and signatures available at apache.org.
-        The keys used to sign releases are published at <a href="https://www.apache.org/dist/fineract/KEYS">KEYS</a>.
-        Instructions for verifying your mirrored downloads are located <a href="https://www.apache.org/dyn/closer.cgi#verify">here</a>.
-      </p>
-      <article>
-        <table class="responsive-table striped">
-          <thead>
-          <tr>
-            <th>Version</th>
-            <th>Release Notes</th>
-            <th>Binary Download</th>
-            <th>Source Download</th>
-          </tr>
-          </thead>
+  <img class="d-block mx-auto" src="assets/down arrow.png" alt="down arrow">
+  <br>
+  <!-- Second Intro of Apache Fineract -->
+  <div class="container-fluid second-intro w-100">
+    <div class="row">
+      <div id="fineract-section-desc" class="col-lg-8 translucent">
+        <div class="row ps-0 fineract-section translucent">
+          <div class="col d-flex ps-0 translucent">
+            <!-- semi circle -->
+            <!-- <img id="semi-circle-block" class="semi-circle" src="semi-circle.png" alt=""> -->
+            <div class="semi-circle"></div>
+            <!-- first card -->
+            <div class="card translucent d-flex">
+              <div class="card-body translucent">
+                <div class="heading-with-image">
 
-          <tbody>
-          <tr>
-            <td>1.8.3</td>
-            <td><a href="https://cwiki.apache.org/confluence/display/FINERACT/1.8.4+-+Apache+Fineract">Apache Fineract 1.8.4</a></td>
-            <td><a href="https://www.apache.org/dyn/closer.cgi?path=/fineract/1.8.4/apache-fineract-1.8.4-binary.tar.gz">apache-fineract-1.8.4-binary.tar.gz</a>
-              (<a href="https://www.apache.org/dist/fineract/1.8.4/apache-fineract-1.8.4-binary.tar.gz.asc">asc</a>,
-              <a href="https://www.apache.org/dist/fineract/1.8.4/apache-fineract-1.8.4-binary.tar.gz.sha512">sha512</a>)</td>
-            <td><a href="https://www.apache.org/dyn/closer.cgi?path=/fineract/1.8.4/apache-fineract-1.8.4-src.tar.gz">apache-fineract-1.8.4-src.tar.gz</a>
-              (<a href="https://www.apache.org/dist/fineract/1.8.4/apache-fineract-1.8.4-src.tar.gz.asc">asc</a>,
-              <a href="https://www.apache.org/dist/fineract/1.8.4/apache-fineract-1.8.4-src.tar.gz.sha512">sha512</a>)
-            </td>
-          </tr>
-          <tr>
-            <td>1.7.2</td>
-            <td><a href="https://cwiki.apache.org/confluence/display/FINERACT/1.7.3+-+Apache+Fineract">Apache Fineract 1.7.3</a></td>
-            <td><a href="https://www.apache.org/dyn/closer.cgi?path=/fineract/1.7.3/apache-fineract-1.7.3-binary.tar.gz">apache-fineract-1.7.3-binary.tar.gz</a>
-              (<a href="https://www.apache.org/dist/fineract/1.7.3/apache-fineract-1.7.3-binary.tar.gz.asc">asc</a>,
-              <a href="https://www.apache.org/dist/fineract/1.7.3/apache-fineract-1.7.3-binary.tar.gz.sha512">sha512</a>)</td>
-            <td><a href="https://www.apache.org/dyn/closer.cgi?path=/fineract/1.7.3/apache-fineract-1.7.3-src.tar.gz">apache-fineract-1.7.3-src.tar.gz</a>
-              (<a href="https://www.apache.org/dist/fineract/1.7.3/apache-fineract-1.7.3-src.tar.gz.asc">asc</a>,
-              <a href="https://www.apache.org/dist/fineract/1.7.3/apache-fineract-1.7.3-src.tar.gz.sha512">sha512</a>)
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </article>
-      <p class="flow-text justify-align">If you are looking for an old release that is not present here or on the mirror, please check the
-        <a href="https://archive.apache.org/dist/fineract/">Apache archives</a>.</p>
-      <div class="divider"></div>
-    </section>
-    <section id="resources" class="section">
-      <h3 class="center-align">Resources</h3>
-      <article>
-        <h4>Frequently Used Links</h4>
-        <p class="flow-text justify-align">
-        <a href="https://www.fineract.dev/">Fineract.dev</a><br/>
-	Community Demo Server (CI/CD)
-        </p>
-        <p class="flow-text justify-align">
-        <a href="https://issues.apache.org/jira/projects/FINERACT">JIRA</a><br/>
-        Issue tracking
-      </p>
-      <p class="flow-text justify-align">
-        <a href="https://cwiki.apache.org/confluence/display/FINERACT/Fineract+Home">Confluence</a><br/>
-        Project management and documentation
-        </p>
-        <p class="flow-text justify-align">
-        <a href="https://cwiki.apache.org/confluence/display/FINERACT/Getting+Started+Docs">Getting Started Guide</a>
-        for Fineract 1.x (non-CN)
-        </p>
-      </article>
-      <article>
-        <h4>Documentation</h4>
-        <p class="flow-text justify-align">
-          <a href="https://cwiki.apache.org/confluence/display/FINERACT/Contributor%27s+Zone" target="_blank">Contributor's Zone</a><br/>
-          Here you will find guides about getting started, how to contribute, and build instructions.
-        </p>
-        <p class="flow-text justify-align">
-          <a href="https://cwiki.apache.org/confluence/display/FINERACT/Committer%27s+Zone" target="_blank">Committer's Zone</a><br/>
-          Here you will find guides about handling pull requests, and dealing with code reviews.
-        </p>
-        <p class="flow-text justify-align">
-          <a href="https://cwiki.apache.org/confluence/x/nK9zB" target="_blank">Security Report</a><br/>
-          Lists of security issues fixed in released versions of the Apache Fineract are available here.
-        </p>
-        <p class="flow-text justify-align">
-          <a href="https://fineract.apache.org/docs/legacy/index.html" target="_blank">Legacy Docs</a><br/>
-          Apache Fineract API Legacy Documentation
-        </p>
-      </article>
-      <article>
-        <h4>Repositories</h4>
-        <p class="flow-text justify-align">
-          <a href="https://github.com/apache/fineract" target="_blank">Apache Fineract</a><br/>
-          Here you will find the source code for Apache Fineract.
-        </p>
-		<p class="flow-text justify-align">
-          <a href="https://github.com/search?q=org%3Aapache+fineract-cn&unscoped_q=fineract-cn" target="_blank">Apache Fineract-CN</a><br/>
-          Here you will find the source code for Apache Fineract Cloud Native. Pre-release version. 
-        </p>
-        <p class="flow-text justify-align">
-          <a href="https://github.com/apache/fineract-site" target="_blank">Web Site</a><br/>
-          Here you will find the source code for this web site.
-        </p>
-      </article>
-    </section>
-  </main>
-  <footer class="page-footer">
-    <div class="container">
-      <section id="reference" class="section">
-        <h3>Reference</h3>
-        <p class="flow-text">
-          <a class="link-inverse" href="https://www.apache.org/" target="_blank">The Apache Software Foundation</a><br/>
-          <a class="link-inverse" href="https://www.apache.org/licenses/" target="_blank">License</a><br/>
-          <a class="link-inverse" href="https://www.apache.org/foundation/sponsorship.html" target="_blank">Sponsorship</a><br/>
-          <a class="link-inverse" href="https://www.apache.org/foundation/thanks.html" target="_blank">Thanks</a><br/>
-          <a class="link-inverse" href="https://www.apache.org/security/" target="_blank">Security</a><br/>
-          <a class="link-inverse" href="https://www.apache.org/events/current-event.html">
-            <img src="https://www.apache.org/events/current-event-234x60.png"/>
-          </a>
-        </p>
-        <div class="divider divider-inverse"></div>
-        <p class="flow-text center-align">
-		&copy; 2009 - <span id="current-year">2020</span>&nbsp;<a class="link-inverse" href="https://apache.org/" target="_blank">The Apache Software Foundation</a>. Licensed under the <a class="link-inverse" href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.<br/>
-          Apache, and the Apache feather logo are trademarks of The Apache Software Foundation.<br/>
-        </p>
-      </section>
+                  <h1 class="card-title intro-heading">Fineract</h1>
+
+
+                  <div class="two-circles-div d-block">
+                    <!-- two circles -->
+                    <div class="two-circles d-block"></div>
+                    <!-- <img class="two-circles" src="two-circles.png" alt=""> -->
+                  </div>
+                </div>
+                <p class="card-text intro-para-cn">Fineract offers a versatile platform that can be deployed
+                  in any
+                  environment and tailored to suit any organization's requirements. It
+                  provides the
+                  necessary tools for managing client data, loan and savings portfolios,
+                  real-time
+                  accounting, and financial reporting.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row ps-0 fineract-section my-5 translucent">
+          <div class="col d-flex ps-0 translucent">
+            <div class="row translucent">
+              <div class="col-lg-3 translucent" style="text-align: center;">
+                <div class="phone-image"></div>
+              </div>
+              <div class="col-lg-9 translucent d-flex">
+                <div id="semi-circle-block-two" class="semi-circle"></div>
+                <div class="card translucent">
+                  <div class="card-body translucent">
+                    <h1 class="card-title intro-heading">Fineract CN</h1>
+                    <p class="card-text intro-para-cn">Fineract CN is a microservices-based platform for digital
+                      financial service providers. Each microservice encapsulates a domain that
+                      can be combined to create new platforms. Fineract CN can process over 1000
+                      transactions/second and includes a backoffice UI. It has been incubated at
+                      Apache since 2015 and is used by a community of companies.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div id="big-circle-div" class="col-lg-4 pe-0">
+        <img id="big-circle" src="assets/big-circle.png" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- end of second intro of apache fineract -->
+
+  <img class="d-block mx-auto" src="assets/down arrow.png" alt="down arrow">
+  <br>
+
+  <section class="open-source w-100">
+    <div class="container-fluid open-source-container w-100">
+      <h1 class="open-source-heading text-center">Revolutionize Banking:<br> Contribute to Open Source!</h1>
+      <br>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="card os-card pt-4 h-100">
+            <div class="card-body">
+              <h5 class="card-title os-title text-white">Mailing Lists</h5>
+              <p class="card-text text-white os-para">If you use, build on top of, deploy or are building contributions
+                and modifications to Apache Fineract, Click the button to subscribe</p>
+              <a href="#" class="btn btn-outline-light">Subscribe</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card os-card pt-4 h-100">
+            <div class="card-body">
+              <h5 class="card-title os-title text-white">Archives</h5>
+              <p class="card-text text-white os-para">Wanna read archives??<br>Join the Archive list </p>
+              <a href="#" class="btn btn-outline-light">Archives</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card os-card  pt-4 h-100">
+            <div class="card-body">
+              <h5 class="card-title os-title text-white">Commits</h5>
+              <p class="card-text text-white os-para">This list receives an email whenever new code is contributed to
+                Apache Fineract. To subscribe, send a blank email to</p>
+              <a href="#" class="btn btn-outline-light pt-0">Commits</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="projects">
+    <div class="container-fluid w-100" id="project-container">
+      <div class="card" style="width: 100%;">
+        <div class="row g-0">
+          <div class="col-md-4 text-center">
+            <img src="assets/kids.png" class="img-fluid rounded-start kids-img" alt="kids-png">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h1 class="card-title projects-title">Projects we are proud of</h1>
+              <h5 class="card-text projects-title pt-5">270 participants in the Teacher for Russia program set out to
+                teach children at schools with a complex social context</h5>
+              <p class="card-text projects-para pt-4"><small class="text-muted">Participants are passionate about
+                  changing the lives of children in rural settlements, villages, and small towns</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <br>
+  <section class="downloads">
+    <div class="container-fluid w-100" id="download-container">
+      <h1 class="projects-title">Downloads</h1>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="download-card">
+            <p class="ver-para"><b>Version: 1.8.3</b></p>
+            <a href="https://cwiki.apache.org/confluence/display/FINERACT/1.8.3+-+Apache+Fineract"
+              class="download-main-link">Apache Fineract 1.8.3
+            </a><br>
+            <a href="https://downloads.apache.org/fineract/1.8.3/apache-fineract-1.8.3-binary.tar.gz.sha512"
+              class="download-sec-link">apache-fineract-1.8.3-binary.tar.gz (asc, sha512)</a>
+            <a href="https://www.apache.org/dyn/closer.cgi?path=/fineract/1.8.3/apache-fineract-1.8.3-src.tar.gz"
+              class="download-sec-link">apache-fineract-1.8.3-src.tar.gz (asc, sha512)</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="download-card">
+            <p class="ver-para"><b>Version: 1.8.3</b></p>
+            <a href="https://cwiki.apache.org/confluence/display/FINERACT/1.8.3+-+Apache+Fineract"
+              class="download-main-link">Apache Fineract 1.8.3
+            </a><br>
+            <a href="https://downloads.apache.org/fineract/1.8.3/apache-fineract-1.8.3-binary.tar.gz.sha512"
+              class="download-sec-link">apache-fineract-1.8.3-binary.tar.gz (asc, sha512)</a>
+            <a href="https://www.apache.org/dyn/closer.cgi?path=/fineract/1.8.3/apache-fineract-1.8.3-src.tar.gz"
+              class="download-sec-link">apache-fineract-1.8.3-src.tar.gz (asc, sha512)</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="download-card">
+            <p class="ver-para"><b>Version: 1.8.3</b></p>
+            <a href="https://cwiki.apache.org/confluence/display/FINERACT/1.8.3+-+Apache+Fineract"
+              class="download-main-link">Apache Fineract 1.8.3
+            </a><br>
+            <a href="https://downloads.apache.org/fineract/1.8.3/apache-fineract-1.8.3-binary.tar.gz.sha512"
+              class="download-sec-link">apache-fineract-1.8.3-binary.tar.gz (asc, sha512)</a>
+            <a href="https://www.apache.org/dyn/closer.cgi?path=/fineract/1.8.3/apache-fineract-1.8.3-src.tar.gz"
+              class="download-sec-link">apache-fineract-1.8.3-src.tar.gz (asc, sha512)</a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <p class="projects-para">If you are looking for an old release that is not present here or on the mirror, please check the <a>Apache Archives.</a></p>
+    </div>
+  </section>
+  <section class="resources">
+    <div class="container-fluid w-100" style="padding: 2% 5%; background-image: url(./assets/Vector.png); background-repeat: no-repeat; background-position: bottom; background-size: cover;">
+      <br>
+      <br>
+      <h1 class="projects-title mx-auto text-center" style="font-size: 50px;">Resources</h1>
+      <br>
+      <br>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card rs-card pt-4 h-100">
+            <div class="card-body">
+              <h5 class="card-title rs-title text-white">Frequently Used Links</h5>
+              <div class="row">
+                <div class="col-6"><button class="btn btn-outline-light w-100 h-100">Fineract.dev</button></div>
+                <div class="col-6"><button class="btn btn-outline-light w-100 h-100">JIRA</button></div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-6"><button class="btn btn-outline-light w-100 h-100">Confluence</button></div>
+                  <div class="col-6"><button class="btn btn-outline-light w-100 h-100">Guide</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card rs-card pt-4 h-100">
+            <div class="card-body">
+              <h5 class="card-title rs-title text-white">Documentation</h5>
+              <div class="row">
+                <div class="col-6"><button class="btn btn-outline-light w-100 h-100">Contributor's zone</button></div>
+                <div class="col-6"><button class="btn btn-outline-light w-100 h-100">Commiter's zone</button></div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-6"><button class="btn btn-outline-light w-100 h-100">Security report</button></div>
+                <div class="col-6"><button class="btn btn-outline-light w-100 h-100">Legacy docs</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card rs-card pt-4 h-100">
+            <div class="card-body">
+              <h5 class="card-title rs-title text-white">Repositories</h5>
+              <div class="row">
+                <div class="col-6"><button class="btn btn-outline-light w-100 h-100">Apache Fineract</button></div>
+                <div class="col-6"><button class="btn btn-outline-light w-100 h-100">Apache Fineract-CN</button></div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-12"><button class="btn btn-outline-light w-100 h-100">Web Site Source Code</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card rs-card pt-4 h-100">
+            <div class="card-body">
+              <h5 class="card-title rs-title text-white">RUB 100 bn</h5>
+              <p class="card-text text-white rs-para">green bonds placement for Russian Railways</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container-fluid h-auto w-100 d-flex justify-content-space-between align-items-center footer-container">
+      <br>
+      <br>
+      <br>
+      <div class="footer-content">
+        <ul class="footer-list ps-0">
+          <li class="footer-list-item w-auto"><a href="#" class="hoverline">The Apache Software Foundatin</a></li>
+          <li class="footer-list-item w-auto"><a href="#" class="hoverline">License</a></li>
+          <li class="footer-list-item w-auto"><a href="#" class="hoverline">Sponsorship</a></li>
+          <li class="footer-list-item w-auto"><a href="#" class="hoverline">Thanks</a></li>
+          <li class="footer-list-item w-auto"><a href="#" class="hoverline">Security</a></li>
+          <li class="footer-list-item w-auto"><a href="#" class="hoverline">Events</a></li>
+        </ul>
+        <br>
+        <img class="footer-content-img" src="assets/footer-pic-left.png" alt="footer-content-img">
+        <br><br>
+        <p class="footer-content-para">© 2009 - 2023 The Apache Software Foundation. Licensed under the Apache License, Version 2.0. Apache, and the Apache feather logo are trademarks of The Apache Software Foundation.</p>
+      </div>
+      <div class="footer-image">
+        <img src="assets/Group-footer-right-img.png" alt="right-footer-img">
+      </div>
     </div>
   </footer>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".button-collapse").sideNav({closeOnClick: true});
-      $("#current-year").text(new Date().getFullYear());
-
-      $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            var headerHeight = $('body').find('header').height();
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html,body').animate({
-                scrollTop: target.offset().top - (headerHeight + 5)
-              }, 1000);
-              return false;
-            }
-          }
-        });
-      });
-    });
-
-    function closeSideNav() {
-      $('.button-collapse').sideNav('hide');
-    }
-  </script>
+  <script src="./index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
